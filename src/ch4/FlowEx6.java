@@ -21,6 +21,7 @@ public class FlowEx6 {
                 break;
             case 12: case 1: case 2:
                 System.out.println("현재 계절은 겨울입니다.");
+                break;
             default:
                 System.out.println("존재하지 않는 월입니다.");
         }
