@@ -6,8 +6,8 @@ import java.util.Scanner;
 * Bingo Line Exception Handling
 * */
 public class MultiArrEx2 {
+    static final int SIZE = 5;
     public static void main(String[] args) {
-        final int SIZE = 5;
         int x = 0, y = 0, num = 0;
 
         int[][] bingoBoard = new int[SIZE][SIZE];
@@ -33,12 +33,7 @@ public class MultiArrEx2 {
 
         boolean flag = true;
         do {
-            for (int i = 0; i < SIZE; i++) {
-                for (int j = 0; j < SIZE; j++) {
-                    System.out.printf("%2d ", bingoBoard[i][j]);
-                }
-                System.out.println();
-            }
+            printBingo(bingoBoard);
 
             System.out.printf("1~%d 사이의 숫자를 입력하세요(종료는 0) : ", SIZE * SIZE);
             num = sc.nextInt();
@@ -52,6 +47,36 @@ public class MultiArrEx2 {
                     }
                 }
             }
+            //validation check!
+            flag = checkBingo(bingoBoard);
         } while (num != 0 && flag);
+        printBingo(bingoBoard);
+        System.out.println("Solve the Bingo!");
     }
+
+    private static void printBingo(int[][] bingoBoard) {
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                System.out.printf("%2d ", bingoBoard[i][j]);
+            }
+            System.out.println();
+        }
+    }
+
+    private static boolean checkBingo(int[][] bingoBoard) {
+        boolean flag = true;
+        int countX = 0;
+        int countY = 0;
+        for (int i = 0; i < bingoBoard.length; i++) {
+            for (int j = 0; j < bingoBoard[i].length; j++) {
+                countX += bingoBoard[i][j];
+                countY += bingoBoard[j][i];
+            }
+            if (countX == 0 || countY == 0) {
+                flag = false;
+            }
+        }
+        return flag;
+    }
+
 }
