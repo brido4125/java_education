@@ -1,0 +1,22 @@
+package ch6;
+
+public class CardTest {
+    public static void main(String[] args) {
+        System.out.println("Card.height = " + Card.height);
+        System.out.println("Card.width = " + Card.width);
+
+        Card c1 = new Card();
+        c1.kind = "Heart";
+        c1.number = 7;
+
+        Card c2 = new Card();
+        c2.kind = "Spade";
+        c2.number = 4;
+
+        System.out.println("c1.kind = " + c1.kind);
+        System.out.println("c1.number = " + c1.number);
+
+        System.out.println("c2.kind = " + c2.kind);
+        System.out.println("c2.number = " + c2.number);
+    }
+}
