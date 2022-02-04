@@ -8,7 +8,6 @@ public class FlowEx28 {
 
         answer = (int) (Math.random() * 100) + 1;
         Scanner sc = new Scanner(System.in);
-
         do {
             System.out.print("1과 100 사이의 정수를 입력하시오 : ");
             input = sc.nextInt();

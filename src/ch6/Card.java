@@ -1,6 +1,6 @@
 package ch6;
 
-public class Card {
+class Card {
     String kind;
     int number;
     static int width = 100;
