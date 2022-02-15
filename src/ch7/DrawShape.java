@@ -33,7 +33,7 @@ class Point{
     }
 
     Point() {
-        this(0, 0);
+        //this(0, 0);
     }
 
     String getXY() {
