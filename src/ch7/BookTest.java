@@ -14,6 +14,10 @@ class EBook extends Book{
     void savePage() {
         System.out.println("EBook.savePage");
     }
+
+    void loadPage() {
+        System.out.println("EBook.loadPage");
+    }
 }
 
 public class BookTest {
@@ -24,10 +28,13 @@ public class BookTest {
         EBook eBook = new EBook();
         //eBook.savePage();
 
+        /**
+         * 부모 타입의 참조변수로 자식 인스턴스 참조
+         * book1.loadPage() 사용 불가
+         */
         Book book1 = new EBook();
         book1.savePage();
         //EBook eBook1 = new Book();
-
         /*
         * book2의 자식 타입으로의 Casting 조건 : 자식 Instance의 주소를 참조변수 값으로 갖고 있어야함
         * */
