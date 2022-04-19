@@ -5,7 +5,6 @@ public class Edu {
     public static void main(String[] args) {
         int[] ary = {32, 11, 2, 5, 78, 32};
         solution(ary);
-        System.out.println(Arrays.toString(ary));
     }
 
     private static  void solution(int[] ary) {
