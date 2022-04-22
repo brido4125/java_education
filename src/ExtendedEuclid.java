@@ -13,8 +13,8 @@ public class ExtendedEuclid {
     }
 
     public static void main(String[] args) {
-        int p = 782544;//오일러수
-        int q = 313;//e
+        int p = 35;//오일러수
+        int q = 7;//e
         if (p <= 0 || q <= 0) throw new IllegalArgumentException("p and q must be positive integers");
         int vals[] = gcd(p, q);
         System.out.println("d = " + vals[2]);
